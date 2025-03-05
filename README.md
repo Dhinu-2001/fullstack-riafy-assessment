@@ -8,8 +8,8 @@
 ## Setup Backend (Django REST Framework)
 1. Clone the repository or navigate to your project folder:
    ```sh
-   git clone <your-repo-url>
-   cd appointment_project
+   git clone https://github.com/Dhinu-2001/fullstack-riafy-assessment.git
+   cd fullstack-riafy-assessment
    ```
 2. Create and activate a virtual environment:
    ```sh
@@ -24,13 +24,13 @@
    ```sh
    python manage.py makemigrations
    python manage.py migrate
-   python manage.py createsuperuser
    ```
 5. Run the development server:
    ```sh
    python manage.py runserver
    ```
    - The API will be available at `http://127.0.0.1:8000/api/`
+   - To view the booking UI `http://127.0.0.1:8000/api/booking/`
    - Admin panel at `http://127.0.0.1:8000/admin/`
 
 ## Setup Frontend (Booking Plugin)
@@ -39,7 +39,7 @@
 3. To embed the plugin in another site, use the following script:
 
 ```html
-<script src="http://127.0.0.1:8000/static/appointments/booking-plugin.js"></script>
+<script src="{% static 'js/booking-plugin.js' %}"></script>
 ```
 
 # Script to Embed the Plugin on a Webpage
@@ -56,7 +56,7 @@ To embed the booking plugin on any webpage, add the following HTML code:
 </head>
 <body>
     <div id="booking-widget"></div>
-    <script src="http://127.0.0.1:8000/static/appointments/booking-plugin.js"></script>
+    <script src="{% static 'js/booking-plugin.js' %}"></script>
 </body>
 </html>
 ```
