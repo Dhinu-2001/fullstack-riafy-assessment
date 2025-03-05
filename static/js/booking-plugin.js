@@ -48,6 +48,19 @@
         });
     }
     
+    function validateForm(name, phone) {
+        const phonePattern = /^\d{10}$/; // Ensures a 10-digit number
+        if (name.trim().length < 3) {
+            document.getElementById('booking-message').textContent = 'Name must be at least 3 characters long';
+            return false;
+        }
+        if (!phonePattern.test(phone)) {
+            document.getElementById('booking-message').textContent = 'Enter a valid 10-digit phone number';
+            return false;
+        }
+        return true;
+    }
+    
     function handleBooking() {
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
@@ -56,6 +69,10 @@
         
         if (!name || !phone || !date || !time) {
             document.getElementById('booking-message').textContent = 'All fields are required!';
+            return;
+        }
+        
+        if (!validateForm(name, phone)) {
             return;
         }
         
