@@ -39,7 +39,7 @@
 3. To embed the plugin in another site, use the following script:
 
 ```html
-<script src="{% static 'js/booking-plugin.js' %}"></script>
+  <script src="http://localhost:8000/static/js/booking-plugin.js"></script>
 ```
 
 # Script to Embed the Plugin on a Webpage
