@@ -1,10 +1,9 @@
 *.pyc 
 __pycache__/ 
 db.sqlite3 
-/static/ 
 media/ 
 .env 
-data_pusher/.env
+
 
 # Visual Studio Code # 
 .vscode/* 
